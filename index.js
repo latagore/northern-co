@@ -9,9 +9,9 @@ getPixels("http://www.northern.co/wp-content/themes/northern/images/puzzle.png",
   let str = "";
   pixels.data.forEach((pixel, i) => {
     if (i % 4 !== 3) {
-      // discard alpha channel
+      // keep RGB channels, discard alpha
       str += String.fromCharCode(pixel)
     }
   })
-  console.log(str);
+  console.log(str)
 })
